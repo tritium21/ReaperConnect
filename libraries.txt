@@ -1,0 +1,4 @@
+mimic
+https://github.com/MycroftAI/mimic1
+license: ...all the permissive ones, see: https://github.com/MycroftAI/mimic1/blob/development/COPYING
+extract release into HopeyClient/rc_hopey
