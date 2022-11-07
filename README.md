@@ -14,4 +14,5 @@ Moderator to Streamer Live TTS
   * Waits on SSE
   * sends line of text through mimic tts to play as a system sound
 
-* Profit
+* Notes for development
+  * https://pynacl.readthedocs.io/en/latest/secret/#example

@@ -7,10 +7,10 @@ block_cipher = None
 
 
 a = Analysis(
-    ['client.py'],
+    ['streamer.py'],
     pathex=[],
     binaries=[],
-    datas=[('rc_hopey/bin', 'rc_hopey/bin')],
+    datas=[('rc_streamer/bin', 'rc_streamer/bin')],
     hiddenimports=[],
     hookspath=[],
     hooksconfig={},
@@ -30,7 +30,7 @@ exe = EXE(
     a.zipfiles,
     a.datas,
     [],
-    name='client',
+    name='streamer',
     debug=False,
     bootloader_ignore_signals=False,
     strip=False,
