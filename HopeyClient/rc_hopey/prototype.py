@@ -4,8 +4,10 @@ import importlib.resources as resources
 
 async def say(line):
     with resources.as_file(resources.files(__package__)) as pth:
+        mimic = str(pth / 'bin' / 'mimic.exe')
+        print("***", mimic)
         proc = await asyncio.create_subprocess_exec(
-            str(pth / 'bin' / 'mimic.exe'),
+            mimic,
             "-t",
             line,
             stdout=asyncio.subprocess.PIPE,
