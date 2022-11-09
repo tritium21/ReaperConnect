@@ -1,19 +1,18 @@
 import asyncio
-import base64
 import importlib.resources as resources
 import json
 import logging
 
 from aiohttp import web
-import nacl.secret
-import nacl.exceptions
+
+import rc_common.crypt
 
 from .ui import tk_app
 
 
 routes = web.RouteTableDef()
 background_tasks = set()
-logger = logging.getLogger()
+logger = logging.getLogger('streamer')
 
 
 async def say(line):
@@ -54,19 +53,9 @@ async def on_shutdown(app):
 
 
 def verify(app):
-    key = app['config'].get('key')
-    if key is None:
-        return lambda x: x
-    key = base64.b64decode(key)
-    box = nacl.secret.SecretBox(key)
-
-    def inner(message):
-        message = base64.b64decode(message)
-        try:
-            return box.decrypt(message).decode('utf-8')
-        except nacl.exceptions.CryptoError:
-            return None
-    return inner
+    key = app['config'].key
+    crypt = rc_common.crypt.from_key(key)
+    return crypt.decrypt
 
 
 def init(argv=None, /, *, config=None):
