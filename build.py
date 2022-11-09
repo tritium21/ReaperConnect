@@ -14,6 +14,7 @@ PYTHON = VENV / 'Scripts' / 'python.exe'
 PIPARGS = [PYTHON, '-m', 'pip', 'install']
 subprocess.run([*PIPARGS, '--upgrade', 'pip', 'wheel'])
 subprocess.run([*PIPARGS, 'pyinstaller'])
+subprocess.run([*PIPARGS, '-r', 'requirements.txt'])
 
 DIST = THIS / f"dist-{datetime.datetime.now():%Y%m%d-%H%M%S}"
 WORK = VENV / '__build'
@@ -22,7 +23,10 @@ PYINSTALLER = VENV / 'Scripts' / 'pyinstaller.exe'
 PYINSTALLER_ARGS = [PYINSTALLER, '--distpath', DIST, '--workpath', WORK]
 
 STREAMER = THIS / 'streamer.spec'
+MODERATOR = THIS / 'moderator.spec'
 
 subprocess.run([*PYINSTALLER_ARGS, STREAMER])
+subprocess.run([*PYINSTALLER_ARGS, MODERATOR])
+
 
 shutil.rmtree(VENV, ignore_errors=True)

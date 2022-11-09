@@ -6,3 +6,4 @@ resources/
 *.exe
 build/
 dist/
+config.toml
