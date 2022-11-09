@@ -1,5 +1,11 @@
 import pathlib
+import sys
 from rc_moderator.app import main
 
-conf_path = pathlib.Path(__file__).with_name('config.toml')
+if getattr(sys, 'frozen', False):
+    base = sys.executable
+else:
+    base = __file__
+
+conf_path = pathlib.Path(base).with_name('config.toml')
 main(conf_path=conf_path)

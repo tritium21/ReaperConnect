@@ -14,7 +14,7 @@ PYTHON = VENV / 'Scripts' / 'python.exe'
 PIPARGS = [PYTHON, '-m', 'pip', 'install']
 subprocess.run([*PIPARGS, '--upgrade', 'pip', 'wheel'])
 subprocess.run([*PIPARGS, 'pyinstaller'])
-subprocess.run([*PIPARGS, '-r', 'requirements.txt'])
+subprocess.run([*PIPARGS, '-r', THIS / 'requirements.txt'])
 
 DIST = THIS / f"dist-{datetime.datetime.now():%Y%m%d-%H%M%S}"
 WORK = VENV / '__build'
