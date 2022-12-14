@@ -265,6 +265,14 @@ idna==3.4 \
     # via
     #   requests
     #   yarl
+marshmallow==3.19.0 \
+    --hash=sha256:90032c0fd650ce94b6ec6dc8dfeb0e3ff50c144586462c389b81a07205bedb78 \
+    --hash=sha256:93f0958568da045b0021ec6aeb7ac37c81bfcccbb9a0e7ed8559885070b3a19b
+    # via marshmallow-dataclass
+marshmallow-dataclass==8.5.10 \
+    --hash=sha256:2a645ce0bec1bb7b24a00f08aaad7d56e3cde8c4b3cdef5f908afbd29b8ff5f7 \
+    --hash=sha256:a7ab243fcb12cf2fe07dce852a0e8d91bfcb02e2447e629eb8752554dd20f106
+    # via -r requirements.in
 multidict==6.0.2 \
     --hash=sha256:0327292e745a880459ef71be14e709aaea2f783f3537588fb4ed09b6c01bca60 \
     --hash=sha256:041b81a5f6b38244b34dc18c7b6aba91f9cdaf854d9a39e5ff0b58e2b5773b9c \
@@ -328,6 +336,14 @@ multidict==6.0.2 \
     # via
     #   aiohttp
     #   yarl
+mypy-extensions==0.4.3 \
+    --hash=sha256:090fedd75945a69ae91ce1303b5824f428daf5a028d2f6ab8a299250a846f15d \
+    --hash=sha256:2d82818f5bb3e369420cb3c4060a7970edba416647068eb4c5343488a6c604a8
+    # via typing-inspect
+packaging==22.0 \
+    --hash=sha256:2198ec20bd4c017b8f9717e00f0c8714076fc2fd93816750ab48e2c41de2cfd3 \
+    --hash=sha256:957e2148ba0e1a3b282772e791ef1d8083648bc131c8ab0c1feba110ce1146c3
+    # via marshmallow
 pycparser==2.21 \
     --hash=sha256:8ee45429555515e1f6b185e78100aea234072576aa43ab53aefcae078162fca9 \
     --hash=sha256:e644fdec12f7872f86c58ff790da456218b10f863970249516d60a5eaca77206
@@ -352,6 +368,14 @@ tomlkit==0.11.6 \
     --hash=sha256:07de26b0d8cfc18f871aec595fda24d95b08fef89d147caa861939f37230bf4b \
     --hash=sha256:71b952e5721688937fb02cf9d354dbcf0785066149d2855e44531ebdd2b65d73
     # via -r requirements.in
+typing-extensions==4.4.0 \
+    --hash=sha256:1511434bb92bf8dd198c12b1cc812e800d4181cfcb867674e0f8279cc93087aa \
+    --hash=sha256:16fa4864408f655d35ec496218b85f79b3437c829e93320c7c9215ccfd92489e
+    # via typing-inspect
+typing-inspect==0.8.0 \
+    --hash=sha256:5fbf9c1e65d4fa01e701fe12a5bca6c6e08a4ffd5bc60bfac028253a447c5188 \
+    --hash=sha256:8b1ff0c400943b6145df8119c41c244ca8207f1f10c9c057aeed1560e4806e3d
+    # via marshmallow-dataclass
 urllib3==1.26.12 \
     --hash=sha256:3fa96cf423e6987997fc326ae8df396db2a8b7c667747d47ddd8ecba91f4a74e \
     --hash=sha256:b930dd878d5a8afb066a637fbb35144fe7901e3b209d1cd4f524bd0e9deee997

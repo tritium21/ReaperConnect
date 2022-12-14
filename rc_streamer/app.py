@@ -18,12 +18,14 @@ logger = logging.getLogger('streamer')
 async def say(line):
     with resources.as_file(resources.files(__package__)) as pth:
         mimic = str(pth / 'bin' / 'mimic.exe')
+        flags = 0x08000000
         proc = await asyncio.create_subprocess_exec(
             mimic,
             "-t",
             line,
             stdout=asyncio.subprocess.PIPE,
             stderr=asyncio.subprocess.PIPE,
+            creationflags=flags,
         )
 
         await proc.wait()

@@ -2,3 +2,4 @@ aiohttp
 requests
 pynacl
 tomlkit
+marshmallow_dataclass
